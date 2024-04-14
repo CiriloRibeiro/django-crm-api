@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from api.views import CreateUserView
+from django.conf import settings
 from django.contrib.staticfiles.urls import static
 
 urlpatterns = [
