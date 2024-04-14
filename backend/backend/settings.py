@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 if not DEBUG:
-    DATABASES = {'default': dj_database_url.parse('postgres://crm_api_db_user:CqvBHDGWAonf1WwZF4yEkVrzjsRTpCvx@dpg-coe3p920si5c739agjgg-a/crm_api_db')}
+    DATABASES = {'default': dj_database_url.config('postgres://crm_api_db_user:CqvBHDGWAonf1WwZF4yEkVrzjsRTpCvx@dpg-coe3p920si5c739agjgg-a/crm_api_db', conn_max_age=600 )}
 else:
     DATABASES = {
         'default': {
