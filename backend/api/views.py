@@ -16,3 +16,7 @@ class CreateUserView(generics.CreateAPIView):
 class LeadRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = LeadSerializer
     queryset = Lead.objects.all()
+    
+class UserListView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
